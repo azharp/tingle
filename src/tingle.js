@@ -30,7 +30,8 @@
             footer: false,
             cssClass: [],
             closeLabel: 'Close',
-            closeMethods: ['overlay', 'button', 'escape']
+            closeMethods: ['overlay', 'button', 'escape'],
+            closeInnerHtml: '×'
         };
 
         // extends config
@@ -302,7 +303,7 @@
 
             this.modalCloseBtnIcon = document.createElement('span');
             this.modalCloseBtnIcon.classList.add('tingle-modal__closeIcon');
-            this.modalCloseBtnIcon.innerHTML = '×';
+            this.modalCloseBtnIcon.innerHTML = this.opts.closeInnerHtml;
 
             this.modalCloseBtnLabel = document.createElement('span');
             this.modalCloseBtnLabel.classList.add('tingle-modal__closeLabel');
